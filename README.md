@@ -1,4 +1,14 @@
- 
+<p align="center">
+  <img src="https://img.shields.io/badge/AI%20Product%20Insights-RAG%20%2B%20LLM-blueviolet?style=for-the-badge" alt="AI Product Insights - RAG + LLM" />
+</p>
+
+<p align="center">
+  <b>Semantic Retrieval · LLM Analysis · Product Insights</b><br>
+  <sub>Interactive feedback intelligence engine built on Tinder reviews (last 12 months)</sub>
+</p>
+
+---
+
 
 # 🚀 AI Product Insights System (RAG + LLM)
 
@@ -295,6 +305,6 @@ This project delivers a fully functional **AI Product Insights Assistant** that:
 ✔ offers actionable recommendations
 ✔ generalizes to real-world analytics workflows
 
-It demonstrates how **RAG + LLM** can transform user feedback into high-quality product intelligence—at scale and in real time.
+It demonstrates how **RAG + LLM** can transform user feedback into high-quality product intelligence at scale and in real time.
 
  
