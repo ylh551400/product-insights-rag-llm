@@ -122,21 +122,39 @@ project/
 
 ---
 
-### **Q: “Why are users frustrated with subscription pricing?”**
+## Why Users Are Uninstalling/Canceling Subscriptions
 
-**Top issues**
+**Direct Answer:** Users are primarily canceling due to **billing fraud concerns** and **account bans immediately after subscribing**. However, the critical issue is that **users cannot successfully cancel** - the app continues charging even after cancellation attempts, account deletions, and bans.
 
-* Prices perceived as predatory
-* Weekly prices shown instead of monthly
-* Users feel forced into subscriptions due to reduced visibility
-* Auto-renewal confusion and refund difficulty
+## Key Patterns & Trends
 
-**Action suggestions**
+### 1. **Billing/Cancellation Crisis (Peak: Apr-Nov 2025)**
+- **8+ reviews** report continued charges after cancellation
+- Users charged even with **banned/deleted accounts** (Reviews 3, 7, 10, 18)
+- **No accessible cancellation method** - not even in Play Store subscriptions (Review 8)
+- Charges continue after **account deactivation** (Reviews 18, 19)
 
-* Show monthly cost upfront
-* Add renewal reminders
-* Reduce paywall friction
-* Provide human-support path for billing issues
+### 2. **Subscription-Triggered Account Bans (Consistent 2025)**
+- **Immediate bans upon subscribing** (Reviews 10, 14: "as soon as I subscribed, I received a ban")
+- Users lose access but **billing continues** (Reviews 3, 7)
+- No refunds provided for banned accounts (Review 9)
+
+### 3. **Deceptive Subscription Practices**
+- **Hidden weekly billing** instead of expected monthly (Review 16)
+- **Reduced functionality after subscribing** - fewer profiles shown (Review 5)
+- Intentionally hiding matches to force continued payments (Review 11)
+
+## Actionable Product Recommendations (Priority Order)
+
+### **CRITICAL - Immediate Action Required**
+1. **Fix cancellation system** - Ensure all cancellation methods work and stop billing immediately
+2. **Stop billing banned accounts** - Automatic subscription cancellation when accounts are banned
+3. **Implement clear checkout process** showing exact billing frequency and amounts
+
+### **HIGH Priority**
+4. **Review ban algorithms** - Investigate why subscriptions trigger immediate bans
+5. **Add accessible customer support** - Phone/email support for billing issues
+6. **Audit subscription functionality** - Ensure paid features work as advertised
 
 ---
 
@@ -154,10 +172,16 @@ project/
 
 ### **Q: “What new features are users requesting?”**
 
-* More granular filters (interests, lifestyle, preferences)
-* Orientation compatibility filtering
-* Better spam / fake-account detection
-* Ability to undo accidental unmatch
+1. **Free "Undo" functionality with cooldown** - Users want ability to reverse accidental swipes without payment (Review #2, April 2025)
+
+2. **Ad-supported free features** - Users specifically mention wanting the return of "watch ads to get another like" feature that was briefly available (Review #6, April 2025)
+
+3. **Better notification controls** - Ability to receive match/message notifications WITHOUT spam promotional notifications (Review #14, April 2025)
+
+4. **Enhanced filtering options** for premium users:
+   - Filter out passport mode users
+   - Sexuality-based filtering  
+   - Regional pricing based on local statistics (Reviews #15, #6)
 
 ---
 
