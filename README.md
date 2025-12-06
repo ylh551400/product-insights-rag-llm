@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/AI%20Product%20Insights-RAG%20%2B%20LLM-blueviolet?style=for-the-badge" alt="AI Product Insights - RAG + LLM" />
+  <img src="https://img.shields.io/badge/AI%20Product%20Insights-RAG%20%2B%20LLM-blueviolet?style=for-the-badge"/>
 </p>
 
 <p align="center">
-  <b>Semantic Retrieval · LLM Analysis · Product Insights</b><br>
-  <sub>Interactive feedback intelligence engine built on Tinder reviews (last 12 months)</sub>
+  <b>Semantic Retrieval · LLM Reasoning · Product Intelligence</b><br>
+  <sub>An interactive RAG-powered insight engine built on real user feedback</sub>
 </p>
 
 ---
