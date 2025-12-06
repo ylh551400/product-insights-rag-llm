@@ -21,8 +21,11 @@ Instead of manual review scrolling or sentiment dashboards, this system generate
 Ask it questions like:
 
 > “Why are users complaining about subscription pricing?”
+> 
 > “What are the biggest pain points recently?”
+> 
 > “What bugs most affect user experience?”
+> 
 > “What new features do users want?”
 
 The system retrieves → analyzes → and synthesizes insights—behaving much like a senior product analyst.
