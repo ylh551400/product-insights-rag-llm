@@ -1,0 +1,26 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+env/
+venv/
+.myenv/
+
+# Ignore API keys and secrets
+.env
+*.key
+
+# Ignore vector databases (Chroma)
+tinder_rag_db/
+tinder_rag_db_recent/
+
+# Ignore datasets (only upload sample)
+data/*.csv
+!data/sample_reviews.csv  # allow sample file
+
+# Ignore system files
+.DS_Store
+
+# Ignore Jupyter checkpoint
+.ipynb_checkpoints/
