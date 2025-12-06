@@ -122,11 +122,11 @@ project/
 
 ---
 
-## Why Users Are Uninstalling/Canceling Subscriptions
+### Q: "Why Users Are Uninstalling/Canceling Subscriptions?"
 
 **Direct Answer:** Users are primarily canceling due to **billing fraud concerns** and **account bans immediately after subscribing**. However, the critical issue is that **users cannot successfully cancel** - the app continues charging even after cancellation attempts, account deletions, and bans.
 
-## Key Patterns & Trends
+**Key Patterns & Trends**
 
 ### 1. **Billing/Cancellation Crisis (Peak: Apr-Nov 2025)**
 - **8+ reviews** report continued charges after cancellation
@@ -144,7 +144,7 @@ project/
 - **Reduced functionality after subscribing** - fewer profiles shown (Review 5)
 - Intentionally hiding matches to force continued payments (Review 11)
 
-## Actionable Product Recommendations (Priority Order)
+### Actionable Product Recommendations (Priority Order)
 
 ### **CRITICAL - Immediate Action Required**
 1. **Fix cancellation system** - Ensure all cancellation methods work and stop billing immediately
@@ -156,17 +156,7 @@ project/
 5. **Add accessible customer support** - Phone/email support for billing issues
 6. **Audit subscription functionality** - Ensure paid features work as advertised
 
----
-
-### **Q: “What bugs affect user experience most?”**
-
-* Login & session expiration failures
-* Message sending failures
-* Frozen UI during swipe
-* Matches disappearing
-* Payment flow breaks after upgrade
-
-**Impact**: "Core usability blockers" → immediate engineering priority.
+ 
 
 ---
 
