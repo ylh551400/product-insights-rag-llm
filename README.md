@@ -70,7 +70,26 @@ streamlit run src/app.py
  
 <img width="1845" height="1142" alt="Screenshot 2025-12-07 143453" src="https://github.com/user-attachments/assets/832b8aa3-6b1d-406a-ba17-a08f49657801" />
 
+The interface supports:
 
+✔ Mode Selection
+
+- General Analysis
+
+- Root Cause Analysis
+
+- Feature Requests
+
+Each mode automatically loads different Quick Questions that match the analysis type.
+
+✔ Ask Your Own Question
+
+Type any product question about complaints, matching algorithm issues, pricing, etc.
+
+
+✔ Evidence Transparency
+
+Every insight comes with source review citations so conclusions are always grounded.
 ---
 
 # 🧱 System Architecture
@@ -178,26 +197,45 @@ analyzer.ask(
 
 ---
 
-# 🧩 How This Generalizes to Real Businesses
+# 🧭 Applicability to Real-World Business (Generalization)
 
-### **E-commerce**
+Even though this project uses Tinder reviews,
+the architecture generalizes directly to:
 
-* Return reasons clustering
-* Pricing pain points
-* Checkout friction themes
+## **E-commerce**
 
-### **SaaS / Subscriptions**
+* Return/reason clustering
+* Pricing sensitivity feedback
+* Category-level complaint spikes
+* Feature requests for search, checkout, delivery
 
-* Churn drivers
-* Paywall optimization
+## **SaaS / Subscription Products**
+
+* Churn reasons
 * Onboarding friction
+* Paywall frustration
+* Feature-gap analysis
 
-### **Customer Support**
+## **Customer Support / CX**
 
-* Ticket summarization
-* Emerging issue detection
-* Root cause analysis automation
+* Daily ticket summarization
+* Emerging bug identification
+* Root cause analysis for escalations
 
+---
+
+## **How this becomes production-ready**
+
+In an enterprise environment:
+
+* Replace CSV ingestion with **API or warehouse pipelines** (Shopify, Amazon, Zendesk, BigQuery)
+* Incrementally embed **only new data**
+* Append new vectors to the existing DB (no rebuild required)
+* Schedule daily/weekly automated analysis via **Airflow/Cron**
+* Deliver insights via Slack/Email dashboards
+
+This demonstrates end-to-end product thinking:
+**how a prototype insight engine becomes a real operational analytics system.**
 ---
 
 # 🎯 Skills Demonstrated
