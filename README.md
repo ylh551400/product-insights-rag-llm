@@ -81,14 +81,10 @@ The interface supports:
 
 Each mode automatically loads different Quick Questions that match the analysis type.
 
-✔ Ask Your Own Question
-
-Type any product question about complaints, matching algorithm issues, pricing, etc.
+✔ Ask Your Own Question: type any product question about complaints, matching algorithm issues, pricing, etc.
 
 
-✔ Evidence Transparency
-
-Every insight comes with source review citations so conclusions are always grounded.
+✔ Evidence Transparency: every insight comes with source review citations so conclusions are always grounded.
 
 ---
 
