@@ -8,82 +8,83 @@
 </p>
 
 ---
-
+ 
+ 
 
 # 🚀 AI Product Insights System (RAG + LLM)
 
-### *An interactive, data-driven insights engine powered by semantic retrieval & LLM reasoning.*
+A fully interactive **AI Product Analyst** that extracts actionable insights from real user reviews using **Retrieval-Augmented Generation (RAG)** + **LLM analytical reasoning**.
 
-This project implements an **AI-powered Product Analyst** capable of answering natural-language questions about user complaints, feature requests, product issues, and emerging risks—using a **Retrieval-Augmented Generation (RAG)** pipeline and **LLM-based analytical reasoning**.
+Powered by:
 
-Instead of manual review scrolling or sentiment dashboards, this system generates **actionable product insights** grounded in real user evidence from the last 12 months.
+* **ChromaDB** semantic search
+* **MiniLM-L6-v2** embeddings
+* **Claude Sonnet 4** for structured product analysis
+* **Streamlit UI** for interactive exploration
 
-Ask it questions like:
-
-> “Why are users complaining about subscription pricing?”
-> 
-> “What are the biggest pain points recently?”
-> 
-> “What bugs most affect user experience?”
-> 
-> “What new features do users want?”
-
-The system retrieves → analyzes → and synthesizes insights—behaving much like a senior product analyst.
+This system behaves like a *senior product analyst*—retrieving relevant evidence, synthesizing themes, identifying root causes, and generating recommendations grounded in real user feedback.
 
 ---
 
-# ⭐ Key Capabilities
+# ⭐ Key Features
 
-### 🔎 **1. Semantic Retrieval via RAG**
+### 🔍 **Semantic Retrieval Engine**
 
-* Embeddings: **MiniLM-L6-v2**
-* Vector database: **ChromaDB**
-* Metadata-aware filtering (date, sentiment, rating, version, engagement)
-* Optimized for recency: uses only **last 12 months** of reviews to maintain relevance.
+* Uses MiniLM embeddings + ChromaDB
+* Filters by recency, sentiment, engagement, metadata
+* Optimized for **last 12 months** of reviews (keeps insights relevant)
 
----
+### 🧠 **LLM-Based Product Analysis**
 
-### 🧠 **2. LLM-Based Analytical Reasoning**
+Claude generates structured insights:
 
-Claude Sonnet 4 generates structured insights:
+* Complaint themes
+* Root causes
+* Trend shifts
+* Product recommendations
+* Evidence citations
 
-* complaint themes
-* root causes
-* trend shifts
-* supporting user evidence (quotes)
-* product recommendations with prioritization
+### 🖥️ **Interactive Streamlit App**
 
-Not just “summaries”—but *product insights*.
+A full UI that lets you:
 
----
+* Choose analysis type (General / Root Cause / Feature Requests)
+* Use built-in **Quick Questions** or type your own
+* Apply filters (negative-only, thumbs-up threshold, etc.)
+* Inspect the **exact source reviews** used as evidence
 
-### 🗣️ **3. Natural-Language Q&A Interface**
+👉 **Run the app:**
 
-You can ask:
-
-```
-"What are users' biggest complaints recently?"
-"Why did sentiment decline this year?"
-"What do users say about safety & fake profiles?"
-"What features are users requesting?"
+```bash
+streamlit run src/app.py
 ```
 
-The system automatically retrieves and reasons over the most relevant reviews.
+---
+
+# 📸 Streamlit Demo (UI Overview)
+
+ <img width="1838" height="1145" alt="Screenshot 2025-12-07 143434" src="https://github.com/user-attachments/assets/f8c22b7e-e3e2-4e6f-8cd4-86ec979fb142" />
+
+
+<img width="1859" height="1149" alt="Screenshot 2025-12-07 143446" src="https://github.com/user-attachments/assets/872ce2f1-662a-41e4-a550-89533d8157b2" />
+ 
+<img width="1845" height="1142" alt="Screenshot 2025-12-07 143453" src="https://github.com/user-attachments/assets/832b8aa3-6b1d-406a-ba17-a08f49657801" />
+
 
 ---
 
 # 🧱 System Architecture
 
 ```
-Natural-Language Question
-        ↓
-Semantic Retrieval (MiniLM + ChromaDB)
-        ↓
-Relevant Review Subset (filtered by recency, rating, metadata)
-        ↓
+User Question
+     ↓
+Embedding → Semantic Retrieval (Chroma)
+     ↓
+Relevant Review Subset
+     ↓
 LLM Analysis (Claude Sonnet 4)
-        ↓
-Structured Insights (themes, causes, recommendations)
+     ↓
+Structured Insights + Evidence
 ```
 
 ---
@@ -93,142 +94,52 @@ Structured Insights (themes, causes, recommendations)
 ```
 project/
 │
-├── README.md
 ├── data/
-│     └── sample_reviews.csv         # 200-row sample dataset
+│     └── sample_reviews.csv              # Optional small demo dataset
 │
 ├── src/
-│     ├── build_rag_system_recent.py # builds the vector DB (last 12 months)
-│     ├── rag_with_claude.py         # RAG + LLM analysis engine
+│     ├── app.py                          # Streamlit UI (main interface)
+│     ├── build_rag_system_recent.py       # Builds 12-month vector DB
+│     ├── rag_with_claude.py               # Core RAG + LLM analysis engine
 │     └── __init__.py
 │
 ├── examples/
-│     └── demo_basic_usage.py        # simple usage example
+│     └── demo_basic_usage.py
 │
-├── .gitignore
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
----
+Vector database directory (auto-generated):
 
-# 🧪 Example Q&A Showcase
-
-*(Real outputs from the system)*
-
----
-
-## **Q: “What are the biggest complaints in the last 12 months?”**
-
-### **Main Themes**
-
-* **Aggressive monetization** (weekly billing, hidden fees, unclear paywalls)
-* **Poor customer support** (no escalation path, automated replies)
-* **Core functionality issues** (filters, recycled profiles, broken payment flows)
-
-### **Representative Evidence**
-
-* “$44/week is absolutely insane.”
-* “Customer service is non-existent.”
-* “Keeps showing people I already declined.”
-
-### **Recommended Actions**
-
-* **High:** Improve pricing transparency; rebuild CS workflows
-* **Medium:** Fix orientation filtering; remove profile recycling
-* **Low:** Investigate multi-charge anomalies
-
----
-
-## **Q: “Why are users canceling subscriptions or uninstalling?”**
-
-### **Key Drivers**
-
-#### 1. **Billing/Cancellation Failures (critical)**
-
-* Charges continue after cancellation attempts
-* Users billed despite deleting/banning accounts
-* Cancellation paths missing or broken
-
-#### 2. **Subscription-Triggered Account Bans**
-
-* Users report getting banned immediately after subscribing
-* Billing continues even after losing access
-
-#### 3. **Deceptive Pricing Models**
-
-* Weekly billing framed as monthly
-* Paid features provide less functionality than free version
-* Perception that matching is throttled unless paying
-
-### **Highest-Priority Fixes**
-
-1. Fix cancellation + billing systems
-2. Automatically stop billing banned accounts
-3. Improve clarity of recurring charges
-4. Review ban algorithms for false positives
-
----
-
-## **Q: “What new features are users requesting?”**
-
-1. **Free “Undo” with cooldown** (accidental swipe reversal)
-2. **Ad-supported free features** (users want “watch ads for more likes” back)
-3. **Smarter notification controls** (messages yes, promotional spam no)
-4. **Better filtering:**
-
-   * Sexuality / intent filters
-   * Filter out passport-mode users
-   * More region-aware pricing
-
-> These examples illustrate how the system performs *interactive product insight generation*
-> with evidence grounding, theme extraction, and actionable recommendations.
-
----
-
-# 🧩 Implementation Details
-
-### 📌 Vector Store
-
-* Embedding model: `all-MiniLM-L6-v2`
-* Stores recency-filtered review dataset (12 months)
-* Metadata schema includes:
-
-  ```
-  date, year, month, rating, version,
-  thumbs_up, has_reply, is_negative, is_positive
-  ```
-
-### 📌 Retrieval Example
-
-```python
-results = collection.query(
-    query_embeddings=embed_model.encode([question]).tolist(),
-    n_results=20,
-    where={"date": {"$gte": "2025-01-01"}, "is_negative": True}
-)
 ```
-
-### 📌 LLM-Oriented Analysis
-
-Structured prompting instructs Claude to:
-
-* extract themes
-* identify user pain points
-* detect trends
-* infer root causes
-* recommend prioritized actions
+tinder_rag_db_recent/
+```
 
 ---
 
 # 🛠 Setup
 
-```
+```bash
 pip install -r requirements.txt
-export ANTHROPIC_API_KEY="your-key-here"
+export ANTHROPIC_API_KEY="your-api-key"
+```
+
+### Build the vector database (12-month window)
+
+```bash
 python src/build_rag_system_recent.py
 ```
 
-Use in any script or notebook:
+### Run the interactive Streamlit app
+
+```bash
+streamlit run src/app.py
+```
+
+---
+
+# 🧪 Programmatic Usage
 
 ```python
 from rag_with_claude import TinderRAGAnalyzer
@@ -243,71 +154,76 @@ analyzer.ask(
 
 ---
 
-# 🧭 Applicability to Real-World Business (Generalization)
+# 🧾 Example Insights (Real Output)
 
-Even though this project uses Tinder reviews,
-the architecture generalizes directly to:
+### **Q: “What are the biggest user complaints recently?”**
 
-## **E-commerce**
+**Themes**
 
-* Return/reason clustering
-* Pricing sensitivity feedback
-* Category-level complaint spikes
-* Feature requests for search, checkout, delivery
+* Pay-to-match monetization
+* Poor match relevance
+* Technical failures (matching failed, disappearing matches)
 
-## **SaaS / Subscription Products**
+**Actionable Recommendations**
 
-* Churn reasons
-* Onboarding friction
-* Paywall frustration
-* Feature-gap analysis
+1. Fix algorithm reliability
+2. Reduce aggressive paywalls
+3. Improve reporting & support flows
 
-## **Customer Support / CX**
+**Sample Evidence**
 
-* Daily ticket summarization
-* Emerging bug identification
-* Root cause analysis for escalations
+> “matching failed every time I try”
+>
+> “algorithm only works if you pay for premium”
 
 ---
 
-## **How this becomes production-ready**
+# 🧩 How This Generalizes to Real Businesses
 
-In an enterprise environment:
+### **E-commerce**
 
-* Replace CSV ingestion with **API or warehouse pipelines** (Shopify, Amazon, Zendesk, BigQuery)
-* Incrementally embed **only new data**
-* Append new vectors to the existing DB (no rebuild required)
-* Schedule daily/weekly automated analysis via **Airflow/Cron**
-* Deliver insights via Slack/Email dashboards
+* Return reasons clustering
+* Pricing pain points
+* Checkout friction themes
 
-This demonstrates end-to-end product thinking:
-**how a prototype insight engine becomes a real operational analytics system.**
+### **SaaS / Subscriptions**
+
+* Churn drivers
+* Paywall optimization
+* Onboarding friction
+
+### **Customer Support**
+
+* Ticket summarization
+* Emerging issue detection
+* Root cause analysis automation
 
 ---
 
 # 🎯 Skills Demonstrated
 
-* RAG chain architecture
+* RAG system design
 * Embedding-based semantic search
-* Advanced LLM prompting for analytical reasoning
-* Topic synthesis & labeling
-* Trend detection & root cause analysis
-* Product sense: prioritization, monetization insights, UX complaints
-* Pipeline thinking (data ingestion → retrieval → LLM → insight delivery)
-* Ability to generalize to enterprise analytics environments
+* Prompt engineering for analytical reasoning
+* Trend detection & theme synthesis
+* End-to-end pipeline thinking
+* Streamlit UI development
+* Evidence-grounded insight generation
 
 ---
 
 # 🌟 Summary
 
-This project delivers a fully functional **AI Product Insights Assistant** that:
+This project delivers a complete **AI Product Insights Engine** that:
 
-✔ understands natural language
-✔ retrieves the most relevant recent evidence
-✔ synthesizes patterns and causes
-✔ offers actionable recommendations
-✔ generalizes to real-world analytics workflows
+✔ retrieves the most relevant user evidence
+✔ analyzes it with LLM reasoning
+✔ synthesizes structured product insights
+✔ visualizes everything in an interactive app
+✔ generalizes directly to real-world product analytics workflows
 
-It demonstrates how **RAG + LLM** can transform user feedback into high-quality product intelligence at scale and in real time.
+It demonstrates how **RAG + LLM** can transform raw user feedback into *real, actionable product intelligence*.
+
+ 
 
  
