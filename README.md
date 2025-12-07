@@ -50,7 +50,6 @@ A full UI that lets you:
 
 * Choose analysis type (General / Root Cause / Feature Requests)
 * Use built-in **Quick Questions** or type your own
-* Apply filters (negative-only, thumbs-up threshold, etc.)
 * Inspect the **exact source reviews** used as evidence
 
 👉 **Run the app:**
@@ -90,6 +89,7 @@ Type any product question about complaints, matching algorithm issues, pricing, 
 ✔ Evidence Transparency
 
 Every insight comes with source review citations so conclusions are always grounded.
+
 ---
 
 # 🧱 System Architecture
