@@ -241,6 +241,7 @@ In an enterprise environment:
 
 This demonstrates end-to-end product thinking:
 **how a prototype insight engine becomes a real operational analytics system.**
+
 ---
 
 # 🎯 Skills Demonstrated
