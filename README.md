@@ -171,25 +171,34 @@ analyzer.ask(
 
 # 🧾 Example Insights (Real Output)
 
-### **Q: “What are the biggest user complaints recently?”**
+## **Q: “Why are users canceling subscriptions or uninstalling?”**
 
-**Themes**
+### **Key Drivers**
 
-* Pay-to-match monetization
-* Poor match relevance
-* Technical failures (matching failed, disappearing matches)
+#### 1. **Billing/Cancellation Failures (critical)**
 
-**Actionable Recommendations**
+* Charges continue after cancellation attempts
+* Users billed despite deleting/banning accounts
+* Cancellation paths missing or broken
 
-1. Fix algorithm reliability
-2. Reduce aggressive paywalls
-3. Improve reporting & support flows
+#### 2. **Subscription-Triggered Account Bans**
 
-**Sample Evidence**
+* Users report getting banned immediately after subscribing
+* Billing continues even after losing access
 
-> “matching failed every time I try”
->
-> “algorithm only works if you pay for premium”
+#### 3. **Deceptive Pricing Models**
+
+* Weekly billing framed as monthly
+* Paid features provide less functionality than free version
+* Perception that matching is throttled unless paying
+
+### **Highest-Priority Fixes**
+
+1. Fix cancellation + billing systems
+2. Automatically stop billing banned accounts
+3. Improve clarity of recurring charges
+4. Review ban algorithms for false positives
+
 
 ---
 
