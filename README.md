@@ -258,16 +258,15 @@ This demonstrates end-to-end product thinking:
 
 # 🌟 Summary
 
-This project delivers a complete **AI Product Insights Engine** that:
+This project delivers a complete AI Product Insights Assistant that:
 
-✔ retrieves the most relevant user evidence
-✔ analyzes it with LLM reasoning
-✔ synthesizes structured product insights
-✔ visualizes everything in an interactive app
-✔ generalizes directly to real-world product analytics workflows
+✔ understands natural language
+✔ retrieves relevant evidence
+✔ synthesizes root causes + themes
+✔ provides actionable recommendations
+✔ exposes everything through an interactive UI
 
-It demonstrates how **RAG + LLM** can transform raw user feedback into *real, actionable product intelligence*.
-
+A practical demonstration of how RAG + LLM can turn user feedback into real product intelligence.
  
 
  
