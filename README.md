@@ -11,7 +11,7 @@
  
  
 
-# 🚀 AI Product Insights System (RAG + LLM)
+#  AI Product Insights System (RAG + LLM)
 
 A fully interactive **AI Product Analyst** that extracts actionable insights from real user reviews using **Retrieval-Augmented Generation (RAG)** + **LLM analytical reasoning**.
 
@@ -26,7 +26,7 @@ This system behaves like a *senior product analyst*—retrieving relevant eviden
 
 ---
 
-# ⭐ Key Features
+#  Key Features
 
 ### 🔍 **Semantic Retrieval Engine**
 
@@ -60,7 +60,7 @@ streamlit run src/app.py
 
 ---
 
-# 📸 Streamlit Demo (UI Overview)
+#  Streamlit Demo (UI Overview)
 
  <img width="1838" height="1145" alt="Screenshot 2025-12-07 143434" src="https://github.com/user-attachments/assets/f8c22b7e-e3e2-4e6f-8cd4-86ec979fb142" />
 
@@ -88,7 +88,7 @@ Each mode automatically loads different Quick Questions that match the analysis 
 
 ---
 
-# 🧱 System Architecture
+#  System Architecture
 
 ```
 User Question
@@ -104,7 +104,7 @@ Structured Insights + Evidence
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```
 project/
@@ -133,7 +133,7 @@ tinder_rag_db_recent/
 
 ---
 
-# 🛠 Setup
+#  Setup
 
 ```bash
 pip install -r requirements.txt
@@ -154,7 +154,7 @@ streamlit run src/app.py
 
 ---
 
-# 🧪 Programmatic Usage
+#  Programmatic Usage
 
 ```python
 from rag_with_claude import TinderRAGAnalyzer
@@ -169,7 +169,7 @@ analyzer.ask(
 
 ---
 
-# 🧾 Example Insights (Real Output)
+#  Example Insights (Real Output)
 
 ## **Q: “Why are users canceling subscriptions or uninstalling?”**
 
@@ -202,7 +202,7 @@ analyzer.ask(
 
 ---
 
-# 🧭 Applicability to Real-World Business (Generalization)
+#  Applicability to Real-World Business (Generalization)
 
 Even though this project uses Tinder reviews,
 the architecture generalizes directly to:
@@ -244,7 +244,7 @@ This demonstrates end-to-end product thinking:
 
 ---
 
-# 🎯 Skills Demonstrated
+#  Skills Demonstrated
 
 * RAG system design
 * Embedding-based semantic search
@@ -256,7 +256,7 @@ This demonstrates end-to-end product thinking:
 
 ---
 
-# 🌟 Summary
+#  Summary
 
 This project delivers a complete AI Product Insights Assistant that:
 
