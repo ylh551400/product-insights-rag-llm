@@ -93,4 +93,4 @@ Enter your Claude API key in the sidebar when prompted. Get one at [console.anth
 
 ## Data
 
-The knowledge base covers **21,722 Tinder Google Play reviews** from the last 12 months (2025-03-31 to 2025-11-27), with an average rating of 2.47 stars. The raw CSV and the built vector database are excluded from this repo — run `build_rag_system_recent.py` locally to generate the database from your own copy of the data.
+The knowledge base covers **21,722 Tinder Google Play reviews** from the last 12 months, with an average rating of 2.47 stars. The raw CSV and the built vector database are excluded from this repo — run `build_rag_system_recent.py` locally to generate the database from your own copy of the data.
