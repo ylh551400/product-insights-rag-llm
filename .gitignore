@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.env
+.venv/
+venv/
+
+# ChromaDB vector database — rebuild locally with build_rag_system_recent.py
+tinder_rag_db_recent/
+
+# Raw data — too large for git, distribute separately
+*.csv
+
+# OS
+.DS_Store
+Thumbs.db
