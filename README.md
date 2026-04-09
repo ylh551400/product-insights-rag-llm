@@ -17,6 +17,9 @@ User question
               └── New retrieval needed          →  Re-query ChromaDB → Claude responds
 ```
 
+<img width="3780" height="1898" alt="image" src="https://github.com/user-attachments/assets/7af7d5d6-71f6-47de-b9b6-ec5c4f4ed921" />
+
+
 **Three analysis modes, each with a different reasoning framework:**
 
 - **General Analysis:** Identifies dominant themes, assesses severity (cosmetic → functional blocker → trust risk), flags trend shifts with dates, and outputs scoped sprint-level recommendations.
