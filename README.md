@@ -26,27 +26,13 @@ User question
 - **Root Cause Analysis:** Traces causal chains from symptom → mechanism → root cause. Distinguishes independent vs. shared root causes across complaint clusters. Rates each chain by evidence strength.
 - **Feature Requests:** Clusters demand by theme, performs gap analysis (current workaround vs. desired state), and separates high-frequency/low-intensity requests from low-frequency/high-intensity ones.
 
-These aren't just different output templates — each mode changes how the LLM reasons about the data.
+
 
 **Retrieval decision layer:** A lightweight `claude-haiku` call acts as a router on every follow-up turn. It reads the conversation history and decides whether existing evidence is sufficient or a new ChromaDB query is needed. If new retrieval is triggered, it also rewrites the user's question into a query optimized for semantic search. Fallback behavior: if the router fails, the system defaults to new retrieval (safe over sorry).
 
 **Context window management:** Recent turns are kept in full; older turns are compressed into one-line summaries. Retrieved chunks from earlier turns are capped and truncated. This keeps the prompt lean enough for 5+ turn sessions without degradation.
 
----
 
-## Design decisions
-
-**Why LLM-as-router instead of keyword heuristics for retrieval decisions?**
-
-"Tell me more" could mean anything. "What about pricing?" might be a new topic or a drill-down on something already covered. Keyword rules can't reliably make this call. The LLM already has the full conversation context — it's the best judge of whether existing evidence is sufficient. Cost is negligible: one short classification call per turn.
-
-**Why mode-specific analytical frameworks instead of one general prompt?**
-
-Early versions used three prompts that were essentially the same structure with different output checklists. The LLM produced similar-looking responses regardless of mode. Rewriting each mode as a distinct reasoning framework (causal chain tracing for root cause, gap analysis for feature requests) changed the actual analytical approach, not just the formatting.
-
-**Why cap retrieval at 20–30 reviews instead of pulling everything?**
-
-Semantic similarity drops off fast. The top 15 results for "billing complaints" are genuinely about billing. By result 30+, you're getting reviews that happen to mention "charge" in passing. More evidence doesn't mean better analysis — it means more noise and a less focused LLM response. If broader coverage is needed, multi-query retrieval (same question rewritten from multiple angles, results deduplicated) is a better approach than increasing n.
 
 ---
 
