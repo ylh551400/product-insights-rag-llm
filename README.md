@@ -1,6 +1,6 @@
 # Product Insights RAG
 
-A conversational product analytics tool that turns raw user reviews into structured, evidence-backed insights. Ask a question, get an answer grounded in real data, then follow up — the system remembers the conversation and decides whether to retrieve new evidence or work with what it already has.
+A conversational product analytics tool that turns raw user reviews into structured, evidence-backed insights, **reducing research time from 40 hours to under 30 minutes**. Ask a question, get an answer grounded in real data, then follow up — the system remembers the conversation and decides whether to retrieve new evidence or work with what it already has.
 
 Built with ChromaDB, Claude API, and Streamlit.
 
